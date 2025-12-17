@@ -1,0 +1,730 @@
+/* TEMA: BIRU NAVY CERAH (DARK MODE BODY) */
+:root {
+    --primary-color: #0077b6; /*  Border keranjang */
+    --secondary-color: #6c757d; /* Tombol lanjut belanja */
+    --background-color: #f4f7f6; /* Latar belakang halaman (Light Mode) */
+    --card-background: #ffffff; /* Latar belakang produk dan search */
+    --text-color: #343a40; /* Warna teks kategori dan urutkan */
+    --text-light: #6c757d; /* Warna teks ulasan */
+    --error-color: #dc3545; /* Untuk warna harga dan tombol logout */
+    --success-color: #28a745; /* Hijau untuk sukses */
+    --navy-dark: #003366; /* Biru navy gelap (DIGUNAKAN UNTUK HEADER BARU) */
+    --info-color: #17a2b8; /* Untuk riwayat order */
+    --skeleton-color: #e0e0e0; /* Warna abu-abu terang untuk skeleton */
+    --shadow-light: 0 4px 10px rgba(0, 0, 0, 0.05);
+    --shadow-hover: 0 8px 20px rgba(0, 0, 0, 0.1);
+    
+    /* BARU: Warna Biru Futuristic */
+    --futuristic-blue: #00AEEF; 
+}
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: var(--background-color); /* Ubah ke light mode */
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* PERHATIAN: Class ini menjamin elemen TERSEMBUNYI */
+.hidden {
+    display: none !important;
+}
+
+/* ======================================= */
+/* === HEADER & NAVIGATION (PERUBAHAN DI SINI) === */
+/* ======================================= */
+header {
+    /* PERUBAHAN: Warna Background Header: Navy Dark */
+    background: var(--navy-dark); /* Warna Biru Navy Gelap */
+    padding: 10px 30px;
+    color: white; /* Teks dan elemen header dibuat putih */
+    font-weight: 700;
+    /* PERUBAHAN: Bayangan Biru Terang (Menyesuaikan dengan Navy Dark) */
+    box-shadow: 0 4px 15px rgba(0, 51, 102, 0.5); 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* LOGO di Header (Ukuran sudah besar 60px) - DIHAPUS DARI index.html, tapi stylenya dibiarkan */
+.logo-header {
+    height: 75px; 
+    width: auto;
+    object-fit: contain;
+    cursor: pointer;
+    /* PENYESUAIAN: Untuk logo yang terpisah dari h1, jika masih ada */
+}
+
+/* LOGO di Auth Pages (Ukuran sudah besar 100px) */
+.logo-auth {
+    height: 100px; 
+    width: auto;
+    object-fit: contain;
+    margin-bottom: 15px;
+}
+/* END REVISI LOGO & HEADER */
+
+header h1 {
+    margin: 0;
+    font-size: 1.8rem;
+    color: white; /* Diperbarui agar kontras dengan header biru */
+}
+
+.header-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.header-actions button {
+    width: auto;
+    margin: 0;
+    padding: 8px 15px;
+    font-size: 0.9rem;
+    border-radius: 6px;
+}
+
+/* Mengatur agar tombol navigasi utama selalu menggunakan flex saat ditampilkan */
+#mainButtons:not(.hidden) {
+    display: flex;
+}
+
+.container {
+    padding: 30px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* ======================================= */
+/* === UTILITY & BASE STYLES (DIPERCEPAT) === */
+/* ======================================= */
+input:not([type="radio"]), textarea, button, select {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    border-radius: 8px;
+    border: 1px solid #ced4da;
+    font-size: 1rem;
+    box-sizing: border-box;
+    color: var(--text-color);
+}
+
+button {
+    background: var(--primary-color);
+    color: white;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s ease, transform 0.1s;
+    font-weight: 600;
+}
+
+button:hover {
+    background: #005f93;
+    transform: translateY(-1px);
+}
+button:active {
+    transform: translateY(0);
+}
+
+button.secondary {
+    background: var(--secondary-color);
+}
+button.secondary:hover {
+    background: #5a6268;
+}
+
+h2 {
+    color: var(--navy-dark);
+    font-weight: 700;
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 5px;
+    margin-top: 0;
+}
+
+/* ======================================= */
+/* === AUTH (LOGIN/REGISTER) STYLES === */
+/* ======================================= */
+#loginPage, #registerPage {
+    max-width: 400px; 
+    margin: 80px auto; 
+    padding: 30px;
+    background: var(--card-background);
+    border-radius: 12px;
+    box-shadow: var(--shadow-hover);
+    text-align: center;
+    color: var(--text-color);
+}
+
+.auth-header {
+    margin-bottom: 25px;
+}
+
+.auth-header h1 {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin: 5px 0 0;
+}
+
+.logo-icon {
+    font-size: 5rem;
+    color: var(--navy-dark);
+    line-height: 1;
+}
+
+.error {
+    color: var(--error-color);
+    font-weight: 600;
+    margin: 5px 0 10px 0;
+}
+.success {
+    color: var(--success-color);
+    font-weight: 600;
+    margin: 5px 0 10px 0;
+}
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+/* ======================================= */
+/* === PRODUCT LIST & GRID (Diubah menjadi lebih kecil) === */
+/* ======================================= */
+
+#filterBar {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    background: var(--card-background);
+    padding: 15px 20px;
+    border-radius: 8px;
+    box-shadow: var(--shadow-light);
+    margin-bottom: 20px;
+}
+#filterBar input, #filterBar select {
+    margin: 0;
+    padding: 8px;
+    border-radius: 6px;
+    width: auto;
+}
+#filterBar input {
+    flex-grow: 1;
+}
+#filterBar select {
+    max-width: 150px;
+}
+#filterBar label {
+    font-weight: 600;
+    color: var(--navy-dark);
+}
+
+.product-grid {
+    display: grid;
+    /* PENYESUAIAN: Minimum lebar kartu diubah menjadi 150px */
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); 
+    gap: 15px; /* PENYESUAIAN: Jarak antar produk dikurangi */
+    padding: 10px 0;
+}
+
+.product {
+    background: var(--card-background);
+    border-radius: 8px;
+    box-shadow: var(--shadow-light);
+    overflow: hidden;
+    text-align: center;
+    cursor: pointer;
+    transition: box-shadow 0.3s ease;
+    padding-bottom: 5px; /* PENYESUAIAN: Padding bawah dikurangi */
+}
+
+.product:hover {
+    box-shadow: var(--shadow-hover);
+}
+
+.product img {
+    width: 100%;
+    /* PENYESUAIAN: Tinggi gambar diperkecil */
+    height: 130px; 
+    object-fit: cover;
+    border-bottom: 1px solid #eee;
+}
+
+.product-info {
+    padding: 5px 8px; /* PENYESUAIAN: Padding informasi dikurangi */
+    /* PENYESUAIAN: TINGGI MINIMUM untuk konsistensi teks*/
+    min-height: 110px; 
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+}
+
+.product-info h3 {
+    /* PENYESUAIAN: Font size nama produk diperkecil */
+    font-size: 0.9rem; 
+    font-weight: 600;
+    color: var(--navy-dark);
+    margin: 0 0 5px 0; 
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Batasi maksimal 2 baris */
+    -webkit-box-orient: vertical;
+}
+
+.product-info p {
+    /* PENYESUAIAN: Font size harga diperkecil sedikit */
+    font-size: 1rem; 
+    font-weight: 700;
+    color: var(--error-color);
+    margin: 0;
+}
+
+/* Card produk */
+.product {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Posisikan tombol selalu di bawah */
+    height: 100%; /* Samakan tinggi semua card */
+}
+
+/* Container dalam card */
+.product .info {
+    flex-grow: 1; /* Isi konten menyesuaikan tinggi */
+}
+
+/* Tombol Keranjang */
+.product button {
+    /* Tipografi */
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+
+    /* Spasi & Ukuran */
+    padding: 10px 12px;
+    margin-top: auto; /* Pastikan tombol paling bawah */
+    width: 100%; /* Rata full */
+    
+    /* Border */
+    border: none;
+    border-radius: 12px;
+
+    /* Warna */
+    background-color: #003c78;
+    color: #fff; /* Teks putih */
+
+    /* Interaksi & Transisi */
+    cursor: pointer;
+    transition: 0.25s ease;
+}
+
+/* Efek Hover (Saat kursor di atas tombol) */
+.product button:hover {
+    /* Mengubah sedikit warna latar belakang saat di-hover 
+       (Menggunakan warna navy yang sedikit lebih gelap) */
+    background-color: #1a2a3a; /* Contoh warna navy yang lebih gelap */
+    /* Atau, jika Anda memiliki variabel untuk hover: background-color: var(--navy-darker); */
+    transform: scale(1.02);
+}
+
+/* Rating Style - PENGATURAN ULANG */
+.product-rating {
+    font-size: 0.8rem;
+    color: gold;
+    display: block;
+    margin-bottom: 5px; /* Jarak rating diatur ulang */
+    padding: 0; /* Padding dihapus karena sudah di dalam .product-info */
+    text-align: left; /* Teks rating di kiri */
+}
+.product-rating span {
+    color: var(--text-light);
+}
+
+
+/* ======================================= */
+/* === DETAIL PAGE STYLES === */
+/* ======================================= */
+#detailPage {
+    max-width: 1000px;
+    margin: 0 auto;
+    background: var(--card-background);
+    padding: 30px;
+    border-radius: 10px;
+    color: var(--text-color);
+    box-shadow: var(--shadow-light);
+}
+
+.detail-content {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+#detailImg {
+    width: 40%;
+    height: 450px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.detail-info {
+    width: 60%;
+}
+
+.detail-info h2 {
+    margin-top: 0;
+    border-bottom: none;
+}
+
+#detailPrice {
+    font-size: 2rem;
+    color: var(--error-color);
+    margin: 15px 0;
+}
+
+#detailDesc {
+    color: var(--text-light);
+    margin-bottom: 25px;
+}
+
+.detail-actions {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.detail-actions input {
+    width: 80px;
+    padding: 10px;
+    text-align: center;
+    border-radius: 6px;
+    margin: 0;
+}
+
+.detail-actions button {
+    flex-grow: 1;
+    margin: 0;
+    padding: 12px;
+}
+
+/* Review Section */
+#reviewList {
+    margin-top: 20px;
+    padding: 0;
+    list-style: none;
+}
+
+.review-item {
+    background: #f8f8f8;
+    padding: 10px 15px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    border-left: 4px solid var(--primary-color);
+}
+
+.review-item strong {
+    color: var(--navy-dark);
+}
+
+/* BARU: Style Rating Bintang di Form */
+.rating-stars {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    margin: 10px 0;
+}
+
+.rating-stars input {
+    display: none;
+}
+
+.rating-stars label {
+    font-size: 2rem;
+    color: #ccc;
+    cursor: pointer;
+    transition: color 0.2s;
+    margin: 0 2px;
+}
+
+.rating-stars label:hover,
+.rating-stars label:hover ~ label,
+.rating-stars input:checked ~ label {
+    color: gold;
+}
+
+/* ======================================= */
+/* === CART & CHECKOUT STYLES === */
+/* ======================================= */
+.cart-list {
+    margin-bottom: 20px;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    background: var(--card-background);
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    box-shadow: var(--shadow-light);
+}
+
+.cart-item img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-right: 15px;
+}
+
+.cart-item-info {
+    flex-grow: 1;
+}
+
+.cart-item-info h3 {
+    font-size: 1.1rem;
+    margin: 0 0 5px 0;
+    color: var(--navy-dark);
+}
+
+.cart-item-info p {
+    font-size: 0.95rem;
+    color: var(--error-color);
+    font-weight: 700;
+}
+
+.cart-item-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.cart-item-actions input {
+    width: 50px;
+    padding: 8px;
+    text-align: center;
+    margin: 0;
+}
+
+.cart-item-actions button {
+    width: auto;
+    padding: 8px 12px;
+    margin: 0;
+}
+
+#cartTotal, #checkoutTotal {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--error-color);
+}
+
+#checkoutPage h3 {
+    color: var(--primary-color);
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 5px;
+    margin-top: 30px;
+}
+
+.payment-options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.payment-option {
+    background: #e9ecef;
+    padding: 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    border: 2px solid transparent;
+}
+.payment-option:hover {
+    background: #dee2e6;
+}
+.payment-option.selected {
+    border-color: var(--primary-color);
+    background: #f0f7ff;
+    font-weight: 600;
+}
+
+/* ======================================= */
+/* === ORDER HISTORY STYLES === */
+/* ======================================= */
+.order-list {
+    margin-top: 20px;
+}
+.order-item {
+    background: var(--card-background);
+    color: var(--text-color);
+    padding: 15px;
+    margin: 15px 0;
+    border-radius: 10px;
+    box-shadow: var(--shadow-light);
+}
+
+/* --- TOAST & SKELETON STYLES (Keep) --- */
+#toastContainer {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 2000;
+}
+
+.toast {
+    background-color: var(--success-color);
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    transition: opacity 0.5s, transform 0.5s;
+    transform: translateY(20px);
+}
+
+.toast.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.toast.error {
+    background-color: var(--error-color);
+}
+
+.skeleton-product {
+    background: var(--card-background);
+    border-radius: 8px;
+    overflow: hidden;
+    padding-bottom: 10px;
+    box-shadow: var(--shadow-light);
+}
+.skeleton-box {
+    background-color: var(--skeleton-color);
+    animation: pulse 1.5s infinite;
+    border-radius: 4px;
+    margin: 5px 10px;
+}
+.skeleton-img {
+    width: 100%;
+    /* PENYESUAIAN: Tinggi gambar skeleton disamakan dengan tinggi gambar produk */
+    height: 130px; 
+    border-bottom: 1px solid #e0e0e0;
+}
+.skeleton-text-lg {
+    height: 18px;
+    width: 80%;
+    margin-top: 10px;
+}
+.skeleton-text-sm {
+    height: 14px;
+    width: 50%;
+    margin-bottom: 10px;
+}
+@keyframes pulse {
+    0% { opacity: 0.6; }
+    50% { opacity: 1; }
+    100% { opacity: 0.6; }
+}
+
+
+/* ======================================= */
+/* === MEDIA QUERIES (RESPONSIVE) === */
+/* ======================================= */
+
+@media (max-width: 992px) {
+    .detail-content {
+        flex-direction: column;
+    }
+    #detailImg {
+        width: 100%;
+        height: 350px;
+    }
+    .detail-info {
+        width: 100%;
+    }
+}
+
+
+@media (max-width: 768px) {
+    header {
+        padding: 10px 15px;
+    }
+    .container {
+        padding: 20px 15px;
+    }
+    
+    /* AUTH */
+    #loginPage, #registerPage {
+        margin: 40px auto;
+        padding: 20px;
+    }
+    
+    /* 3. PRODUCT GRID */
+    .product-grid {
+        /* PENYESUAIAN: Di layar tablet/HP, minimum lebar kartu dikurangi lagi */
+        grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); 
+        gap: 10px;
+    }
+
+    /* 4. FILTER BAR */
+    #filterBar {
+        flex-wrap: wrap; 
+        padding: 10px;
+        gap: 10px;
+    }
+    
+    #filterBar label {
+        flex-basis: 100%;
+        margin-top: 5px;
+        margin-bottom: -5px;
+        font-size: 0.9rem;
+    }
+    #filterBar select {
+        max-width: none;
+    }
+
+    /* 5. CART PAGE */
+    .cart-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .cart-item-actions {
+        margin-top: 10px;
+        width: 100%;
+        justify-content: space-between;
+    }
+}
+
+/* MEDIA QUERY khusus untuk Mobile Phone (Max 480px) */
+@media (max-width: 480px) {
+    
+    .product-grid {
+        /* Untuk layar HP yang sangat kecil, jaga agar tetap minimal 2 kolom */
+        grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); 
+    }
+    
+    .cart-item-actions {
+        /* Pastikan elemen aksi di keranjang berbaris saat di HP */
+        flex-direction: row; 
+        gap: 5px;
+    }
+    
+    .cart-item-actions button {
+        flex-grow: 1;
+    }
+    
+    .detail-actions {
+        flex-direction: column;
+    }
+    .detail-actions input {
+        width: 100%;
+    }
+}

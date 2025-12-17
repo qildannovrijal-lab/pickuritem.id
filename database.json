@@ -1,0 +1,292 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Admin PickurItem",
+      "email": "admin@pickuritem.com",
+      "pass": "admin123",
+      "phone": "081234567890",
+      "address": "Jl. E-Commerce No. 1, Surabaya, Jawa Timur",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "orders": []
+    },
+    {
+      "id": 2,
+      "name": "John Doe",
+      "email": "john@example.com",
+      "pass": "john123",
+      "phone": "081234567891",
+      "address": "Jl. Contoh No. 2, Surabaya, Jawa Timur",
+      "createdAt": "2025-01-15T08:30:00.000Z",
+      "orders": []
+    },
+    {
+      "id": 3,
+      "name": "Jane Smith",
+      "email": "jane@example.com",
+      "pass": "jane123",
+      "phone": "081234567892",
+      "address": "Jl. Samping No. 5, Jakarta Selatan",
+      "createdAt": "2025-01-20T14:15:00.000Z",
+      "orders": []
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "name": "Tote Bag Kanvas",
+      "price": 150000,
+      "category": "fashion",
+      "desc": "Tote bag kanvas berkualitas tinggi, cocok untuk kuliah dan kerja. Material premium dan tahan lama.",
+      "img": "https://tse1.mm.bing.net/th/id/OIP.afQoTBIuA2sHKHWtIzwNfAHaHa?pid=Api&P=0&h=180",
+      "stock": 50,
+      "sold": 15,
+      "weight": 300,
+      "condition": "new"
+    },
+    {
+      "id": 2,
+      "name": "Mug Custom Desain",
+      "price": 55000,
+      "category": "aksesori",
+      "desc": "Mug keramik yang bisa dicetak dengan desain, foto, atau logo sendiri. Kualitas cetak HD dan tahan lama.",
+      "img": "https://m.media-amazon.com/images/I/71jOQcpz0dL._AC_.jpg",
+      "stock": 100,
+      "sold": 42,
+      "weight": 400,
+      "condition": "new"
+    },
+    {
+      "id": 3,
+      "name": "Gelang Tali Handmade",
+      "price": 25000,
+      "category": "aksesori",
+      "desc": "Aksesori gelang tali unik, dibuat 100% secara handmade dengan berbagai pilihan warna.",
+      "img": "https://down-id.img.susercontent.com/file/82cd48a06d1d59f0493e4d2dd8a221d3",
+      "stock": 75,
+      "sold": 28,
+      "weight": 50,
+      "condition": "new"
+    },
+    {
+      "id": 4,
+      "name": "Kaos Polo Kustom",
+      "price": 195000,
+      "category": "fashion",
+      "desc": "Kaos polo dengan bordir kustom, bahan nyaman dan adem. Cocok untuk seragam kantor atau komunitas.",
+      "img": "https://s.kaskus.id/images/2023/05/23/11076539_202305231119430768.jpg",
+      "stock": 30,
+      "sold": 12,
+      "weight": 250,
+      "condition": "new"
+    },
+    {
+      "id": 5,
+      "name": "Notebook Kulit",
+      "price": 85000,
+      "category": "lainnya",
+      "desc": "Notebook cover kulit premium untuk mencatat ide kreatif. Halaman isi 100 lembar kertas berkualitas.",
+      "img": "https://www.beedigitalk.web.id/wp-content/uploads/2023/08/blocknote-map-kulit.jpg",
+      "stock": 40,
+      "sold": 18,
+      "weight": 350,
+      "condition": "new"
+    },
+    {
+      "id": 6,
+      "name": "Alat Pahat Mini",
+      "price": 120000,
+      "category": "perkakas",
+      "desc": "Set alat pahat mini, cocok untuk kerajinan kayu kecil. Isi 12 pcs dengan berbagai bentuk mata pahat.",
+      "img": "https://down-id.img.susercontent.com/file/eced28e974a1e45d9f5bad9212106824",
+      "stock": 20,
+      "sold": 8,
+      "weight": 600,
+      "condition": "new"
+    },
+    {
+      "id": 7,
+      "name": "Bola Basket",
+      "price": 120000,
+      "category": "sport",
+      "desc": "Pilihan terbaik untuk pemain pemula hingga profesional yang menginginkan performa maksimal di lapangan. Size 7 official.",
+      "img": "https://tse1.mm.bing.net/th/id/OIP.KQ8Qxyp0Lb1PKZ7mFUVKDAHaEK?pid=Api&P=0&h=180",
+      "stock": 35,
+      "sold": 22,
+      "weight": 650,
+      "condition": "new"
+    },
+    {
+      "id": 8,
+      "name": "Nike Dunk Low Panda",
+      "price": 1800000,
+      "category": "shoes",
+      "desc": "Nike Panda hadir dengan desain klasik hitam-putih yang clean dan timeless, cocok dipadukan dengan berbagai gaya. 100% Original.",
+      "img": "https://tse2.mm.bing.net/th/id/OIP.1ixp3qnGOOwTYp4Agu0kNQHaFj?pid=Api&P=0&h=180",
+      "stock": 15,
+      "sold": 7,
+      "weight": 800,
+      "condition": "new"
+    },
+    {
+      "id": 9,
+      "name": "Nike Air Jordan",
+      "price": 2000000,
+      "category": "shoes",
+      "desc": "Nike Air Jordan 100% original. Iconic design with premium quality leather and excellent cushioning technology.",
+      "img": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/full/105/MTA-37902758/nike_sepatu_nike_air_jordan_1_high_og_dark_mocha_full01_6d2810ab.jpg",
+      "stock": 10,
+      "sold": 4,
+      "weight": 850,
+      "condition": "new"
+    }
+  ],
+  "reviews": {
+    "1": [
+      {
+        "userId": 1,
+        "userName": "Admin PickurItem",
+        "text": "Produk berkualitas tinggi, sangat recommended! Jahitan rapi dan bahannya tebal.",
+        "rating": 5,
+        "date": "15/12/2025",
+        "createdAt": "2025-12-15T10:30:00.000Z"
+      },
+      {
+        "userId": 2,
+        "userName": "John Doe",
+        "text": "Tote bag nya bagus dan kuat, udah dipake seminggu masih oke.",
+        "rating": 5,
+        "date": "16/12/2025",
+        "createdAt": "2025-12-16T14:20:00.000Z"
+      }
+    ],
+    "2": [
+      {
+        "userId": 3,
+        "userName": "Jane Smith",
+        "text": "Mug custom nya lucu banget! Desain sesuai request dan cetak nya tajam.",
+        "rating": 5,
+        "date": "14/12/2025",
+        "createdAt": "2025-12-14T09:15:00.000Z"
+      }
+    ],
+    "7": [
+      {
+        "userId": 2,
+        "userName": "John Doe",
+        "text": "Bola basket nya mantap, grip bagus dan bouncing nya stabil.",
+        "rating": 4,
+        "date": "13/12/2025",
+        "createdAt": "2025-12-13T16:45:00.000Z"
+      }
+    ],
+    "8": [
+      {
+        "userId": 1,
+        "userName": "Admin PickurItem",
+        "text": "Sepatu original dengan kualitas terbaik, sangat nyaman dipakai! Worth it!",
+        "rating": 5,
+        "date": "15/12/2025",
+        "createdAt": "2025-12-15T11:00:00.000Z"
+      },
+      {
+        "userId": 3,
+        "userName": "Jane Smith",
+        "text": "Keren banget! Original dan box nya masih lengkap. Fast respon seller!",
+        "rating": 5,
+        "date": "16/12/2025",
+        "createdAt": "2025-12-16T13:30:00.000Z"
+      }
+    ],
+    "9": [
+      {
+        "userId": 2,
+        "userName": "John Doe",
+        "text": "Air Jordan legend! Kualitas premium, nyaman dan gaya. Highly recommended.",
+        "rating": 5,
+        "date": "17/12/2025",
+        "createdAt": "2025-12-17T08:20:00.000Z"
+      }
+    ]
+  },
+  "orders": [
+    {
+      "id": 1702890000000,
+      "userId": 2,
+      "userName": "John Doe",
+      "items": [
+        {
+          "id": 1,
+          "name": "Tote Bag Kanvas",
+          "price": 150000,
+          "qty": 1
+        },
+        {
+          "id": 7,
+          "name": "Bola Basket",
+          "price": 120000,
+          "qty": 1
+        }
+      ],
+      "total": 270000,
+      "telepon": "081234567891",
+      "alamat": "Jl. Contoh No. 2, Surabaya, Jawa Timur",
+      "paymentMethod": "transfer",
+      "date": "14/12/2025",
+      "status": "Selesai",
+      "createdAt": "2025-12-14T10:30:00.000Z"
+    },
+    {
+      "id": 1702976400000,
+      "userId": 3,
+      "userName": "Jane Smith",
+      "items": [
+        {
+          "id": 8,
+          "name": "Nike Dunk Low Panda",
+          "price": 1800000,
+          "qty": 1
+        }
+      ],
+      "total": 1800000,
+      "telepon": "081234567892",
+      "alamat": "Jl. Samping No. 5, Jakarta Selatan",
+      "paymentMethod": "gopay",
+      "date": "15/12/2025",
+      "status": "Dalam Pengiriman",
+      "createdAt": "2025-12-15T14:20:00.000Z"
+    }
+  ],
+  "cart": [],
+  "settings": {
+    "siteName": "PickurItem",
+    "currency": "IDR",
+    "shippingCost": {
+      "jabodetabek": 15000,
+      "jawa": 25000,
+      "luarJawa": 50000
+    },
+    "paymentMethods": [
+      {
+        "id": "transfer",
+        "name": "Transfer Bank",
+        "description": "Transfer ke BCA/Mandiri",
+        "enabled": true
+      },
+      {
+        "id": "gopay",
+        "name": "E-Wallet",
+        "description": "Gopay/OVO/Dana",
+        "enabled": true
+      },
+      {
+        "id": "cod",
+        "name": "COD",
+        "description": "Bayar di Tempat",
+        "enabled": true
+      }
+    ],
+    "version": "1.0.0",
+    "lastUpdate": "2025-12-17T00:00:00.000Z"
+  }
+}
